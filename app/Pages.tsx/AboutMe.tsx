@@ -30,7 +30,7 @@ const expertiseCards = [
   },
 ];
 
-const ExpertiseSection = () => {
+const AboutMe = () => {
   return (
     <section
       id="about"
@@ -142,4 +142,4 @@ const ExpertiseSection = () => {
   );
 };
 
-export default ExpertiseSection;
+export default AboutMe;
