@@ -23,7 +23,7 @@ export default function Footer() {
             <a href="https://github.com/oluwaduyilemi" aria-label="GitHub" className="hover:text-blue-700">
               <Github className="w-5 h-5" />
             </a>
-            <a href="#" aria-label="Twitter" className="hover:text-blue-700">
+            <a href="https://x.com/Duyilemi_Code" aria-label="Twitter" className="hover:text-blue-700">
               <Twitter className="w-5 h-5" />
             </a>
             <a href="https://www.linkedin.com/in/favour-bakare-53650535b" aria-label="LinkedIn" className="hover:text-blue-700">

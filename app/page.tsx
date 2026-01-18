@@ -32,7 +32,7 @@ const experienceData = [
     role: "Frontend Engineer",
     company: "AgriVest (Remote)",
     description:
-      "Delivered high-performance features for event platforms serving 4,000+ attendees. Applied WCAG 2.1 AA standards and built reusable components that reduced rollout time.",
+      "Developed core features for AgriVest, an agritech investment platform enabling users to fund and manage farm projects. Designed reusable UI components and optimized performance, accelerating feature rollout and supporting a growing user base.",
   },
   {
     role: "Frontend Intern",

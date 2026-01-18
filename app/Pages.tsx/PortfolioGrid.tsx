@@ -25,10 +25,10 @@ const projects: Project[] = [
     stack: ["Next.js", "TailwindCss", "TypeScript", "API ingretion"],
   },
    {
-    title: "E-Marketplace Dashboard",
-    image: "/images/e-commerce.png",
-    liveUrl: "https://dashboard.demo",
-    stack: ["React",   "Redux",],
+    title: "VFGL Store",
+    image: "/images/vfgl.png",
+    liveUrl: "https://vfgl-e-commerce-project-ssgx.vercel.app",
+    stack: ["React", "Recharts", "Css", "Redux", "TypeScript"],
   },
    {
     title: "Paymon",
