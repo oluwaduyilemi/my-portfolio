@@ -52,16 +52,16 @@ const AboutMe = () => {
                    </div>
               <h1 className="text-4xl font-bold leading-tight md:text-6xl">
                 Crafting Digital <br />
-                <span className="text-gray-400">
+                <span className="text-gray-300">
                   Experiences That Matter
                 </span>
               </h1>
             </AnimateIn>
 
             <AnimateIn delay={0.2} direction="left">
-              <div className="space-y-6 text-lg text-gray-400">
+              <div className="space-y-6 text-lg font-medium text-gray-400">
                 <p>
-                  I’m a passionate React developer with over 3 years of experience
+                  I’m a passionate React developer with over 4 years of experience
                   building scalable, performant web applications.
                 </p>
                 <p>
@@ -74,7 +74,7 @@ const AboutMe = () => {
             {/* DOWNLOAD RESUME */}
             <AnimateIn delay={0.4} direction="left">
               <a
-                href="images/Favour_Bakare_Resume.pdf"
+                href="/images/Favour_Bakare_Resume_1.pdf"
                 download
                 className="inline-flex w-fit items-center gap-3 rounded-full border border-blue-500/30 bg-blue-500/10 px-6 py-3 text-sm font-medium text-blue-400 transition hover:bg-blue-500/20"
               >
@@ -106,7 +106,7 @@ const AboutMe = () => {
                     <h3 className="mb-3 text-xl font-bold">
                       {card.title}
                     </h3> 
-                    <p className="text-gray-400">{card.desc}</p>
+                    <p className="text-gray-300">{card.desc}</p>
                   </div>
                 </AnimateIn>
               );

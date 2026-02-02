@@ -3,6 +3,7 @@ import AboutMe from "./Pages.tsx/AboutMe";
 import Hero from "./Pages.tsx/Hero";
 import PortfolioGrid from "./Pages.tsx/PortfolioGrid";
 import SkillsExperience from "./Pages.tsx/SkillsExperience";
+import Testimonials from "./Pages.tsx/Testimonials";
 import WhatIDo from "./Pages.tsx/WhatIDo";
 
 const skillsData = [
@@ -68,11 +69,15 @@ export default function Home() {
         <WhatIDo/>
         </h1>
         </section>
+         <h1> 
+        <Testimonials/>
+        </h1>
 
         <section id="contact">
           <h1><Navbar/></h1>
         </section>
-     
+
+        
     </div>
   );
 }
