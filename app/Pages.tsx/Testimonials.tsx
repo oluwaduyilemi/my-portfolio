@@ -30,7 +30,7 @@ const testimonials: Testimonial[] = [
     image: "/images/pm.jpg",
   },
   {
-    quote: "Working with Sodiq was a pleasure. His backend solutions were clean, efficient, and reliable, and he always delivered on time. I could trust him with complex tasks without worry.",
+    quote: "Working wit Favour was a pleasure. His front-end solutions were clean, efficient, and reliable, and he always delivered on time. I could trust him with complex tasks without worry.",
     name: "Omirin Adebayo",
     role: "Backend Developer",
     company: "Myedupathway",
