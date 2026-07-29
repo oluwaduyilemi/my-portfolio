@@ -25,13 +25,19 @@ const skillsData = [
 const experienceData = [
   {
     role: "Frontend Engineer",
-    company: "Edupathway (Remote)",
+    company: "Myedupathway (Remote)",
     description:
       "Engineered a rebranded company website with React and TypeScript, improving cross-browser reliability by 40%. Built reusable UI components and improved SEO and accessibility scores.",
   },
   {
     role: "Frontend Engineer",
     company: "AgriVest (Remote)",
+    description:
+      "Developed core features for AgriVest, an agritech investment platform enabling users to fund and manage farm projects. Designed reusable UI components and optimized performance, accelerating feature rollout and supporting a growing user base.",
+  },
+   {
+    role: "Frontend Engineer",
+    company: "GCS Commodities (Remote)",
     description:
       "Developed core features for AgriVest, an agritech investment platform enabling users to fund and manage farm projects. Designed reusable UI components and optimized performance, accelerating feature rollout and supporting a growing user base.",
   },
@@ -76,7 +82,6 @@ export default function Home() {
         <section id="contact">
           <h1><Navbar/></h1>
         </section>
-
         
     </div>
   );

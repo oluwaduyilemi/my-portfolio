@@ -59,7 +59,7 @@ export default function Testimonials() {
 
     const interval = setInterval(() => {
       emblaApi.scrollNext();
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [emblaApi]);

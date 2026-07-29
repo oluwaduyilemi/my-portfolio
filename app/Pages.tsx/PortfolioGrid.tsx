@@ -14,11 +14,18 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Agrivest",
-    live: "https://agrivest2.onrender.com/",
-    image: "/images/agri.png", 
-    liveUrl: "https://agrivest2.onrender.com/",
+    title: "Gabon Cacao & Sugar Company (GCS)",
+    live: "https://www.gaboncs-co.com/en",
+    image: "/images/chocolate.jpg", 
+    liveUrl: "https://www.gaboncs-co.com/en",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+  },
+  {
+    title: "Myedupathway",
+    live: "https://www.myedupathway.com/",
+    image: "/images/edu.jpg", 
+    liveUrl: "https://www.myedupathway.com/",
+    stack: ["Vue.js", "Rust", "TypeScript", "Tailwind CSS", "Framer Motion"],
   },
   {
     title: "Alpha Tech Hub",

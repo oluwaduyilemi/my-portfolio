@@ -51,11 +51,7 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 w-full z-50 bg-[#050505] text-white border-b border-gray-800">
 
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-
-       
-
         {/* LOGO */}
-
         <div
 
           onClick={() => scrollToSection("home")}
