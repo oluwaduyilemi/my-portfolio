@@ -16,7 +16,7 @@ const projects: Project[] = [
   {
     title: "Gabon Cacao & Sugar Company (GCS)",
     live: "https://www.gaboncs-co.com/en",
-    image: "/images/chocolate.jpg", 
+    image: "/images/OIP.webp", 
     liveUrl: "https://www.gaboncs-co.com/en",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
   },
