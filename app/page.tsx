@@ -19,7 +19,6 @@ const skillsData = [
   { name: "CSS3" },
   { name: "GraphQL" },
   { name: "GitHub" },
-  
 ];
 
 const experienceData = [
@@ -35,15 +34,15 @@ const experienceData = [
     description:
       "Developed core features for AgriVest, an agritech investment platform enabling users to fund and manage farm projects. Designed reusable UI components and optimized performance, accelerating feature rollout and supporting a growing user base.",
   },
-   {
+  {
     role: "Frontend Engineer",
     company: "GCS Commodities (Remote)",
     description:
-      "Developed core features for AgriVest, an agritech investment platform enabling users to fund and manage farm projects. Designed reusable UI components and optimized performance, accelerating feature rollout and supporting a growing user base.",
+      "Built a localized corporate web application for international commodity exports. Integrated dynamic internationalization, performance optimization, and responsive design systems.",
   },
   {
     role: "Frontend Intern",
-    company: "Alpha Tech Hub ",
+    company: "Alpha Tech Hub",
     description:
       "Worked closely with designers and backend engineers to build responsive interfaces, integrate APIs, and improve overall UI consistency across products.",
   },
@@ -51,38 +50,32 @@ const experienceData = [
 
 export default function Home() {
   return (
-    <div className="">
+    <main className="bg-white dark:bg-[#070707] text-gray-900 dark:text-white transition-colors duration-300 min-h-screen">
+      <Navbar />
+
       <section id="home">
-          <h1 > <Hero/></h1>
-        </section>
+        <Hero />
+      </section>
 
-        <section id="about">
-          <h1> <AboutMe/></h1>
-        </section>
+      <section id="about">
+        <AboutMe />
+      </section>
 
-       <section id="experience">
-          <h1> <SkillsExperience
-          skills={skillsData}
-          experiences={experienceData}
-        /></h1>
-        </section>
+      <section id="experience">
+        <SkillsExperience skills={skillsData} experiences={experienceData} />
+      </section>
 
-        <section id="projects">
-          <h1><PortfolioGrid/></h1>
-        </section>
-         <section id="services">
-       <h1> 
-        <WhatIDo/>
-        </h1>
-        </section>
-         <h1> 
-        <Testimonials/>
-        </h1>
+      <section id="projects">
+        <PortfolioGrid />
+      </section>
 
-        <section id="contact">
-          <h1><Navbar/></h1>
-        </section>
-        
-    </div>
+      <section id="services">
+        <WhatIDo />
+      </section>
+
+      <section id="testimonials">
+        <Testimonials />
+      </section>
+    </main>
   );
 }

@@ -1,145 +1,132 @@
+
+
 "use client";
 
-import { Code2, Sparkles, Zap, Download } from "lucide-react";
-import AnimateIn from "@/app/componenets/ui/AnimateIn";
+import React from "react";
+import { motion } from "framer-motion";
+import { Code2, Sparkles, Zap } from "lucide-react";
+import { fadeUp, staggerContainer } from "@/app/lib/animations";
 
-const expertiseCards = [
-  {
-    title: "Expertise",
-    desc: "Specialized in building scalable web applications with modern technologies and best practices.",
-    icon: Code2,
-    color: "text-blue-500",
-    bg: "bg-blue-500/10",
-    colSpan: "md:col-span-2",
-  },
-  {
-    title: "Clean Code",
-    desc: "Writing maintainable, well-documented code that scales.",
-    icon: Sparkles,
-    color: "text-blue-400",
-    bg: "bg-blue-400/10",
-    colSpan: "md:col-span-1",
-  },
-  {
-    title: "Performance",
-    desc: "Optimizing for speed and efficiency in every project.",
-    icon: Zap,
-    color: "text-blue-600",
-    bg: "bg-blue-600/10",
-    colSpan: "md:col-span-1",
-  },
-];
-
-const AboutMe = () => {
+export default function About() {
   return (
-    <section
-      id="about"
-      className="overflow-hidden bg-[#050505] py-20 text-white md:px-4"
-    >
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
+    <section id="about" className="bg-[#070707] text-white py-24 px-6 md:px-12 lg:px-20 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          {/* LEFT COLUMN - CONTENT */}
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="lg:col-span-6 space-y-6"
+          >
+            {/* Section Header */}
+            <div>
+              <h2 className="text-2xl font-bold tracking-wide text-white">About Me</h2>
+              <div className="w-12 h-1 bg-gradient-to-r from-[#C5A059] to-[#997736] mt-2 rounded-full" />
+            </div>
 
-          {/* LEFT CONTENT */}
-          <div className="flex flex-col space-y-8">
-            <AnimateIn direction="left">
-              <div className="mb-16">
-                     <AnimateIn direction="left">
-                       <h2 className="text-4xl font-bold tracking-tight ">
-                        About me
-                       </h2>
-                       <div className="mt-2 h-1 w-18 rounded-full bg-blue-600" />
-                     </AnimateIn>
-                   </div>
-              <h1 className="text-4xl font-bold leading-tight md:text-6xl">
-                Crafting Digital <br />
-                <span className="text-gray-300">
-                  Experiences That Matter
-                </span>
-              </h1>
-            </AnimateIn>
+            {/* Main Headline */}
+            <h3 className="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight text-white">
+              Crafting Digital Experiences That Matter
+            </h3>
 
-            <AnimateIn delay={0.2} direction="left">
-              <div className="space-y-6 text-lg font-medium text-gray-400">
-                <p>
-                  I’m a passionate React developer with over 4 years of experience
-                  building scalable, performant web applications.
-                </p>
-                <p>
-                  My expertise spans React, Next.js, TypeScript, and modern UI
-                  systems.
-                </p>
+            {/* Paragraphs */}
+            <div className="space-y-4 text-gray-400 text-base sm:text-lg leading-relaxed font-normal">
+              <p>
+                I&apos;m a passionate React developer with over 4 years of experience building scalable, performant web applications.
+              </p>
+              <p>
+                My expertise spans React, Next.js, TypeScript, and modern UI systems.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* RIGHT COLUMN - FEATURE CARDS */}
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6"
+          >
+            {/* CARD 1: EXPERTISE */}
+            <motion.div
+              variants={fadeUp}
+              whileHover={{ y: -6, transition: { duration: 0.2 } }}
+              className="p-6 rounded-2xl bg-[#121212] border border-[#222222] hover:border-[#C5A059]/50 transition-all shadow-xl group"
+            >
+              <div className="w-12 h-12 rounded-xl bg-[#1E1A11] border border-[#C5A059]/30 flex items-center justify-center text-[#C5A059] mb-5 group-hover:scale-110 transition-transform">
+                <Code2 className="w-6 h-6" />
               </div>
-            </AnimateIn>
+              <h4 className="text-xl font-bold text-white mb-2">Expertise</h4>
+              <p className="text-sm text-gray-400 leading-relaxed">
+                Specialized in building scalable web applications with modern technologies and best practices.
+              </p>
+            </motion.div>
 
-            {/* DOWNLOAD RESUME */}
-            <AnimateIn delay={0.4} direction="left">
-              <a
-                href="/images/Favour_Bakare_Resume_1.pdf"
-                download
-                className="inline-flex w-fit items-center gap-3 rounded-full border border-blue-500/30 bg-blue-500/10 px-6 py-3 text-sm font-medium text-blue-400 transition hover:bg-blue-500/20"
-              >
-                <Download className="h-4 w-4" />
-                Download Resume
-              </a>
-            </AnimateIn>
-          </div>
+            {/* CARD 2: CLEAN CODE */}
+            <motion.div
+              variants={fadeUp}
+              whileHover={{ y: -6, transition: { duration: 0.2 } }}
+              className="p-6 rounded-2xl bg-[#121212] border border-[#222222] hover:border-[#C5A059]/50 transition-all shadow-xl group"
+            >
+              <div className="w-12 h-12 rounded-xl bg-[#1E1A11] border border-[#C5A059]/30 flex items-center justify-center text-[#C5A059] mb-5 group-hover:scale-110 transition-transform">
+                <Sparkles className="w-6 h-6" />
+              </div>
+              <h4 className="text-xl font-bold text-white mb-2">Clean Code</h4>
+              <p className="text-sm text-gray-400 leading-relaxed">
+                Writing maintainable, well-documented code that scales.
+              </p>
+            </motion.div>
 
-          {/* RIGHT CONTENT */}
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            {/* CARD 3: PERFORMANCE */}
+            <motion.div
+              variants={fadeUp}
+              whileHover={{ y: -6, transition: { duration: 0.2 } }}
+              className="p-6 rounded-2xl bg-[#121212] border border-[#222222] hover:border-[#C5A059]/50 transition-all shadow-xl group"
+            >
+              <div className="w-12 h-12 rounded-xl bg-[#1E1A11] border border-[#C5A059]/30 flex items-center justify-center text-[#C5A059] mb-5 group-hover:scale-110 transition-transform">
+                <Zap className="w-6 h-6" />
+              </div>
+              <h4 className="text-xl font-bold text-white mb-2">Performance</h4>
+              <p className="text-sm text-gray-400 leading-relaxed">
+                Optimizing for speed and efficiency in every project.
+              </p>
+            </motion.div>
 
-            {/* TOP CARDS */}
-            {expertiseCards.map((card, i) => {
-              const Icon = card.icon;
-              return (
-                <AnimateIn
-                  key={i}
-                  delay={0.3 + i * 0.1}
-                  direction="right"
-                  className={card.colSpan}
-                >
-                  <div className="h-full rounded-3xl border border-white/5 bg-white/5 p-8 transition hover:border-blue-500/30 hover:bg-white/10">
-                    <div
-                      className={`mb-6 flex h-12 w-12 items-center justify-center rounded-xl ${card.bg} ${card.color}`}
-                    >
-                      <Icon className="h-6 w-6" />
-                    </div>
-                    <h3 className="mb-3 text-xl font-bold">
-                      {card.title}
-                    </h3> 
-                    <p className="text-gray-300">{card.desc}</p>
-                  </div>
-                </AnimateIn>
-              );
-            })}
+            {/* CARD 4: STATS */}
+            <motion.div
+              variants={fadeUp}
+              whileHover={{ y: -6, transition: { duration: 0.2 } }}
+              className="p-6 rounded-2xl bg-[#121212] border border-[#222222] hover:border-[#C5A059]/50 transition-all shadow-xl flex items-center justify-between"
+            >
+              <div>
+                <span className="text-3xl font-extrabold bg-gradient-to-r from-[#C5A059] via-[#E6C387] to-[#997736] bg-clip-text text-transparent block">
+                  100%
+                </span>
+                <span className="text-[11px] font-bold text-gray-400 tracking-wider uppercase mt-1 block">
+                  Client Satisfaction
+                </span>
+              </div>
 
-           
-   <AnimateIn delay={0.6} direction="up" className="md:col-span-2">
-  <div className="flex flex-col h-57 py-3 gap-6 rounded-3xl border border-white/5 bg-white/5 md:flex-row md:items-center md:justify-between">
+              <div className="h-10 w-[1px] bg-[#222222]" />
 
-    <div className="flex flex-col items-center gap-7 text-center">
-      <p className="text-3xl font-bold text-blue-500">100%</p>
-      <p className="mt-1 text-sm uppercase tracking-wider text-gray-200">
-        Client Satisfaction
-      </p>
-    </div>
+              <div>
+                <span className="text-3xl font-extrabold bg-gradient-to-r from-[#C5A059] via-[#E6C387] to-[#997736] bg-clip-text text-transparent block">
+                  24/7
+                </span>
+                <span className="text-[11px] font-bold text-gray-400 tracking-wider uppercase mt-1 block">
+                  Support
+                </span>
+              </div>
+            </motion.div>
 
-    <div className="hidden h-10 w-px bg-gray-400 md:block" />
+          </motion.div>
 
-    <div className="flex flex-col gap-8 items-center text-center px-2">
-      <p className="text-3xl font-bold text-blue-500">24/7</p>
-      <p className="mt-1 text-sm uppercase tracking-wider text-gray-200">
-        Support
-      </p>
-    </div>
-
-  </div>
-</AnimateIn>
-
-          </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default AboutMe;
+}
